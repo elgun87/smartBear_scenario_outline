@@ -1,4 +1,4 @@
-@order
+@smoke
 Feature: Order Process
 
   Scenario Outline: user order process as "<name>"
