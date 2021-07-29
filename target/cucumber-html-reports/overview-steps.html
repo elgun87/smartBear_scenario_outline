@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>29 Jul 2021, 10:05</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Hookes.setDriver()</td>
+              <td>6</td>
+              <td class="duration" data-value="1239333333">1.239</td>
+              <td class="duration" data-value="1239333333">1.552</td>
+              <td class="duration" data-value="7436000000">7.436</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Hookes.tearDown()</td>
+              <td>6</td>
+              <td class="duration" data-value="2052833333">2.052</td>
+              <td class="duration" data-value="2052833333">2.059</td>
+              <td class="duration" data-value="12317000000">12.317</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Login_Page_Steps.user_click_on_log_in_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="228166666">0.228</td>
+              <td class="duration" data-value="228166666">0.242</td>
+              <td class="duration" data-value="1369000000">1.369</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Login_Page_Steps.user_enter_password_as_to_password_box(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="53000000">0.053</td>
+              <td class="duration" data-value="53000000">0.057</td>
+              <td class="duration" data-value="318000000">0.318</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Login_Page_Steps.user_enters_username_as_to_username_box(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="41333333">0.041</td>
+              <td class="duration" data-value="41333333">0.046</td>
+              <td class="duration" data-value="248000000">0.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.Login_Page_Steps.user_open_url(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="103000000">0.103</td>
+              <td class="duration" data-value="103000000">0.111</td>
+              <td class="duration" data-value="618000000">0.618</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_click_on_order_page(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="114750000">0.114</td>
+              <td class="duration" data-value="114750000">0.143</td>
+              <td class="duration" data-value="1377000000">1.377</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_clicks_proccess_button()</td>
+              <td>6</td>
+              <td class="duration" data-value="1120166666">1.120</td>
+              <td class="duration" data-value="1120166666">1.160</td>
+              <td class="duration" data-value="6721000000">6.721</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_card_number(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1070333333">1.070</td>
+              <td class="duration" data-value="1070333333">1.078</td>
+              <td class="duration" data-value="6422000000">6.422</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_city(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1066500000">1.066</td>
+              <td class="duration" data-value="1066500000">1.073</td>
+              <td class="duration" data-value="6399000000">6.399</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_customer_name(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1071666666">1.071</td>
+              <td class="duration" data-value="1071666666">1.072</td>
+              <td class="duration" data-value="6430000000">6.430</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_expiration_date(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1063333333">1.063</td>
+              <td class="duration" data-value="1063333333">1.071</td>
+              <td class="duration" data-value="6380000000">6.380</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_state(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1062166666">1.062</td>
+              <td class="duration" data-value="1062166666">1.074</td>
+              <td class="duration" data-value="6373000000">6.373</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_street(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1071333333">1.071</td>
+              <td class="duration" data-value="1071333333">1.074</td>
+              <td class="duration" data-value="6428000000">6.428</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_as_zip_code(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1064166666">1.064</td>
+              <td class="duration" data-value="1064166666">1.072</td>
+              <td class="duration" data-value="6385000000">6.385</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_enters_quantity(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="2128000000">2.128</td>
+              <td class="duration" data-value="2128000000">2.129</td>
+              <td class="duration" data-value="12768000000">12.768</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_select_as_card_type(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1104666666">1.104</td>
+              <td class="duration" data-value="1104666666">1.110</td>
+              <td class="duration" data-value="6628000000">6.628</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_select_product(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="1179666666">1.179</td>
+              <td class="duration" data-value="1179666666">1.228</td>
+              <td class="duration" data-value="7078000000">7.078</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.smart_bear_order_process.step_definitions.WebOrders_Page_Steps.user_verifies_is_in_the_list(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="56500000">0.056</td>
+              <td class="duration" data-value="56500000">0.062</td>
+              <td class="duration" data-value="339000000">0.339</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>19</td>
+            <td>120</td>
+            <td class="duration">0.850</td>
+            <td class="duration">12.768</td>
+            <td class="duration">1:42.034</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

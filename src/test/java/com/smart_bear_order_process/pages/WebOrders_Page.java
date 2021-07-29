@@ -4,12 +4,13 @@ import com.smart_bear_order_process.utilities.BrowserSleep;
 import com.smart_bear_order_process.utilities.Driver;
 import com.smart_bear_order_process.utilities.DriverWait;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
+import java.security.Key;
 import java.util.List;
 
 public class WebOrders_Page {
@@ -66,6 +67,8 @@ public class WebOrders_Page {
     }
 
     public void enter_quantity(String quantity){
+        quantity_box.sendKeys(Keys.BACK_SPACE);
+        BrowserSleep.until(1);
         quantity_box.sendKeys(quantity);
     }
 

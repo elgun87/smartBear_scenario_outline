@@ -9,8 +9,11 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/smart_bear_order_process/step_definitions",
         dryRun = false,
-        plugin = "html:target/smart-bear.html",
-        tags = ""
+        tags = "@order",
+        plugin = {"html:target/smart-bear.html",
+                "json:target/json-report.json",
+                "rerun:target/rerun.txt"
+        }
 )
 public class Cukes {
 }
